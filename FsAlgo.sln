@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FsAlgoLib", "FsAlgoLib\FsAlgoLib.fsproj", "{0664602D-2C65-4204-940B-BDC5D44841D6}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FsAlgoConsoleTest", "FsAlgoConsoleTest\FsAlgoConsoleTest.fsproj", "{E93848C2-9F47-434C-BE00-4A65B5F34852}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0664602D-2C65-4204-940B-BDC5D44841D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0664602D-2C65-4204-940B-BDC5D44841D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0664602D-2C65-4204-940B-BDC5D44841D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0664602D-2C65-4204-940B-BDC5D44841D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E93848C2-9F47-434C-BE00-4A65B5F34852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E93848C2-9F47-434C-BE00-4A65B5F34852}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E93848C2-9F47-434C-BE00-4A65B5F34852}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E93848C2-9F47-434C-BE00-4A65B5F34852}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
