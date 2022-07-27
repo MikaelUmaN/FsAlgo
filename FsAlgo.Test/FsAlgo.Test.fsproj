@@ -5,6 +5,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ExpectoFsCheck.fs" />
+    <Compile Include="Sorting.fs" />
     <Compile Include="MaximumSubArray.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
