@@ -7,8 +7,8 @@
 				"$msCompile"
 			],
 			"group": "build",
-			"label": "Build: FsAlgoConsoleTest.fsproj",
-			"detail": "Build the FsAlgoConsoleTest.fsproj project using dotnet build"
+			"label": "Build: FsAlgo.Test.fsproj",
+			"detail": "Build the FsAlgo.Test.fsproj project using dotnet build"
 		}
 	]
 }

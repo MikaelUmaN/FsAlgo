@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FsAlgoLib", "FsAlgoLib\FsAlgoLib.fsproj", "{0664602D-2C65-4204-940B-BDC5D44841D6}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FsAlgoConsoleTest", "FsAlgoConsoleTest\FsAlgoConsoleTest.fsproj", "{E93848C2-9F47-434C-BE00-4A65B5F34852}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FsAlgo.Test", "FsAlgo.Test\FsAlgo.Test.fsproj", "{E93848C2-9F47-434C-BE00-4A65B5F34852}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

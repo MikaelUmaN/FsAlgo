@@ -5,11 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "FsAlgoConsoleTest",
+            "name": "FsAlgo.Test",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "Build: FsAlgoConsoleTest.fsproj",
-            "program": "${workspaceFolder}/FsAlgoConsoleTest/bin/Debug/net6.0/FsAlgoConsoleTest.dll",
+            "preLaunchTask": "Build: FsAlgo.Test.fsproj",
+            "program": "${workspaceFolder}/FsAlgo.Test/bin/Debug/net6.0/FsAlgo.Test.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
