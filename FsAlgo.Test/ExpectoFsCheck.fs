@@ -16,11 +16,17 @@ module ExpectoFsCheck =
     type NonNanNonZeroFloat = NonNanNonZeroFloat of float with
         member x.Get = match x with NonNanNonZeroFloat f -> f
         override x.ToString() = x.Get.ToString()
-        static member op_Explicit(NormalFloat f) = f
+        static member op_Explicit(NonNanNonZeroFloat f) = f
 
-    let nonNanFloat =
+    type NonNanFloat = NonNanFloat of float with
+        member x.Get = match x with NonNanFloat f -> f
+        override x.ToString() = x.Get.ToString()
+        static member op_Explicit(NonNanFloat f) = f
+
+    let nonNanFloat: Gen<NonNanFloat> =
         Arb.generate<NormalFloat>
         |> Gen.filter (fun (NormalFloat f) -> filterSmallFloatsExclZero f)
+        |> Gen.map (fun (NormalFloat f) -> NonNanFloat(f))
 
     let nonNanNonZeroFloat = 
         Arb.generate<NormalFloat>
@@ -28,6 +34,8 @@ module ExpectoFsCheck =
         |> Gen.map (fun (NormalFloat f) -> NonNanNonZeroFloat(f))
 
     type FloatGens =
+        static member NonNanFloat() =
+            Arb.fromGen nonNanFloat
         static member NonNanNonZeroFloat() =
             { new Arbitrary<NonNanNonZeroFloat>() with
                 override x.Generator = nonNanNonZeroFloat
@@ -38,6 +46,10 @@ module ExpectoFsCheck =
         member x.Get = match x with NonEmptyList f -> f
         override x.ToString() = x.Get.ToString()
 
+    type NonEmptySmallList<'a> = NonEmptySmallList of 'a list with
+        member x.Get = match x with NonEmptySmallList f -> f
+        override x.ToString() = x.Get.ToString()
+
     let nonEmptyListGen<'a> : Gen<NonEmptyList<'a>> = 
         gen { 
             let! an = Arb.generate<NonEmptyArray<'a>>
@@ -45,9 +57,15 @@ module ExpectoFsCheck =
             return NonEmptyList a
         }
 
+    let nonEmptySmallList<'a> =
+        let g = Arb.generate<'a>
+        Gen.listOfLength 10 g
+
     type ListGens =
         static member NonEmptyList() =
             Arb.fromGen nonEmptyListGen
+        static member NonEmptySmallList() =
+            Arb.fromGen nonEmptySmallList
 
     let private config = { 
         FsCheckConfig.defaultConfig with 
