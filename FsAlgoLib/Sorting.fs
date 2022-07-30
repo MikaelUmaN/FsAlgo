@@ -57,3 +57,31 @@ module Sorting =
                 inner xsn (bn::b)
 
         inner a []
+
+    let mergeSort (a: 'a list) (sortAsc: bool voption) =
+        let sOrder = sortOrder sortAsc
+
+        let merge a b =
+            let rec inner a b m =
+                match a, b with
+                | x::xs, y::ys ->
+                    match sOrder x y with
+                    | Ordering.Smaller -> inner xs b (x::m)
+                    | _ -> inner a ys (y::m)
+                | xs, [] ->
+                    List.rev m @ xs
+                | [], ys ->
+                    List.rev m @ ys
+            inner a b []
+
+        let rec divide a =
+            match a with
+            | [] -> []
+            | x::[] -> [x]
+            | xs ->
+                let d = xs.Length / 2
+                let x = divide xs[..d-1]
+                let y = divide xs[d..]
+                merge x y
+
+        divide a
