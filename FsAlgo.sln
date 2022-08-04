@@ -7,6 +7,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FsAlgoLib", "FsAlgoLib\FsAl
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FsAlgo.Test", "FsAlgo.Test\FsAlgo.Test.fsproj", "{E93848C2-9F47-434C-BE00-4A65B5F34852}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FsAlgo.PerfTest", "FsAlgo.PerfTest\FsAlgo.PerfTest.fsproj", "{92EF611D-EC37-42D0-BF92-3F2ED41A9100}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{E93848C2-9F47-434C-BE00-4A65B5F34852}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E93848C2-9F47-434C-BE00-4A65B5F34852}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E93848C2-9F47-434C-BE00-4A65B5F34852}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92EF611D-EC37-42D0-BF92-3F2ED41A9100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92EF611D-EC37-42D0-BF92-3F2ED41A9100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92EF611D-EC37-42D0-BF92-3F2ED41A9100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92EF611D-EC37-42D0-BF92-3F2ED41A9100}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
